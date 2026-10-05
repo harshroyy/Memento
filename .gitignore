@@ -1,0 +1,19 @@
+# Compiled binaries
+proxy
+*.out
+*.exe
+*.o
+*.a
+*.so
+*.dylib
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
