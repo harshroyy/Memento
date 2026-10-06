@@ -1,8 +1,24 @@
-# Multithreaded HTTP Proxy with LRU Cache (C++)
+<p align="center">
+  <h1 align="center">🧵 Memento</h1>
+  <p align="center">
+    <em>A from-scratch C++ POSIX proxy with thread-safe LRU response caching</em>
+  </p>
+</p>
 
-A lightweight, multithreaded **HTTP forward proxy server** written in C++ using raw POSIX sockets. It accepts requests from a client (browser or `curl`), forwards them to the destination web server, relays the response back, and stores responses in a thread-safe **LRU (Least Recently Used) cache** so repeated requests are served instantly from memory.
+<p align="center">
+  <img src="https://img.shields.io/badge/C%2B%2B-17-blue?style=flat-square&logo=c%2B%2B" alt="C++17">
+  <img src="https://img.shields.io/badge/Dependencies-Zero-green?style=flat-square" alt="Zero Dependencies">
+  <img src="https://img.shields.io/badge/OS-Linux%20%7C%20macOS-lightgrey?style=flat-square" alt="OS">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="License">
+</p>
 
-Built as a learning project to understand sockets, DNS resolution, TCP streaming, concurrency, and cache design from the ground up, with no external libraries.
+---
+
+**Memento** is a lightweight, educational HTTP forward proxy server built entirely from scratch using raw POSIX sockets. It acts as a middleman between a client (like a browser or `curl`) and the destination web server. 
+
+Its superpower? A **thread-safe, O(1) LRU (Least Recently Used) cache**. When a request is made, Memento checks its memory first. If the response is already cached, it serves it instantly—no network call required. If it's a cache miss, it resolves the DNS, streams the response chunk-by-chunk, and stores it for future use.
+
+Built as a learning project to master sockets, DNS resolution, TCP streaming, concurrency, and cache design from the ground up, with **zero external libraries**.
 
 ---
 
